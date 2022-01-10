@@ -1,0 +1,87 @@
+body{
+    background-color: thistle;
+    margin: 0px;
+}
+
+.image{
+    float:left;
+    width:120px;
+    height:120px;
+}
+img:hover{
+    opacity: 0.7;
+}
+
+form,#question{
+    text-align:center;
+}
+
+h2,h3{
+    text-align: center;
+    color: indigo;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h4{
+    text-align: justify;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p,section {
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    margin: 5px;
+}
+
+nav {
+    display: block;
+    width: 100%;
+    top: 0;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    background-color:rgba(224, 223, 223, 0.938);
+    font-size: large;
+}
+
+footer{
+    float: left;
+    margin-left: 6px;
+    margin-bottom: 6px;
+    padding: 10px;
+    border:  3px solid rgb(0, 0, 0);
+    background-image: url(back.jpg);
+}
+
+#F{
+    position:relative;
+    top: 13em;
+}
+
+#OPA{
+    text-align: right;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+.link,nav:link {
+    color: rgb(188, 105, 243);
+}
+
+.link:visited {
+    color: rgb(43, 0, 145);
+}
+
+.link:hover {
+    color: rgb(228, 147, 187);
+}
+  
+.link,nav:active {
+    color: rgb(195, 171, 206);
+}
+

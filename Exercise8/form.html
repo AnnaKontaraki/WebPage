@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<script src="javascript.js"></script>
+		<meta charset = "utf-8">
+        <title>Εγγραφή χρήστη</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <nav class="menu">
+                <ul>
+                    <li><a class="color" href="index.html">Αρχικη Σελιδα</a></li>
+                    <li><a class="color" href="bio.html">Πυθαγορας</a></li>
+                    <li><a class="color" href="material.html">Προσθετο Υλικο</a></li>
+                    <li><a class="color" href="form.html">Δημιουργια Λογαριασμου</a></li>
+                </ul>
+            </nav>
+            <h1 class="color">ΦΙΛΟΙ ΑΡΙΘΜΟΙ</h1>
+        </div>
+        
+        <h2 id="centered">Γίνε κι εσύ μέλος της ομάδας μας </h2>
+        <p id="centered">Συμπλήρωσε παρακάτω τα στοιχεία σου, απάντησε και σε κάποιες πολύ σύντομες ερωτήσεις και εμείς θα σε προσθέσουμε στην ομάδα μας.</p>
+
+        <form onsubmit="checkPassword(this)">
+            <div class="sign-in">
+                <fieldset>
+                    <legend>Προσωπικά Στοιχεία</legend>
+                    <label for="fname" autocomplete="on">Όνομα:</label>
+                    <input type="text" id="fname" name="fname" pattern="[A-Z][A-Za-z' -]+"
+                    title="Πρώτο γράμμα κεφαλαίο & λατινικοί χαρακτήρες" required><br><br>
+                    <label for="lname" autocomplete="on">Επώνυμο:</label>
+                    <input type="text" id="lname" name="lname"pattern="[A-Z][A-Za-z' -]+"
+                    title="Πρώτο γράμμα κεφαλαίο & λατινικοί χαρακτήρες" required><br><br>
+                    <label for="birthday">Ημερομηνία γέννησης:</label>
+                    <input type="date" id="birthday" name="birthday" required onclick="validateAge()"><br><br>
+                    <p id="alert1"></p>
+
+                    <label for="fname">Φύλο:</label>
+                    <label id="check" for="male"><input type="radio" id="male" name="gender" value="male">Άντρας</label>
+                    <label id="check" for="female"><input type="radio" id="female" name="gender" value="female">Γυναίκα</label><br><br>
+
+                    <label for="lname">Χώρα:</label>
+                    <input name="country" list="country_name">
+                    <datalist id="country_name">
+                        <option></option>
+                        <option>Αγγλία</option>
+                        <option>Γερμανία</option>
+                        <option>Γαλλία</option>
+                        <option>Δανία</option>
+                        <option>Ελλάδα</option>
+                        <option>Ισπανία</option>
+                        <option>Ιταλία</option>
+                    </datalist><br><br>
+
+                    <label for="lname">Πόλη:</label>
+                    <input name="country" list="town_name">
+                    <datalist id="town_name">
+                        <option></option>
+                        <option>Αθήνα</option>
+                        <option>Βερολίνο</option>
+                        <option>Κοπεγχάγη</option>
+                        <option>Λονδίνο</option>
+                        <option>Μαρδίτη</option>
+                        <option>Παρίσι</option>
+                        <option>Ρώμη</option>
+                    </datalist><br><br>
+
+                    <label for="lname">Τ.Κ.:</label>
+                    <input type="text" id="tk" name="tk"><br><br>
+
+                    <label for="lname" autocomplete="on">Διεύθυνση:</label>
+                    <input type="text" id="adress" name="adress" placeholder="Αττικής" pattern="[A-Z][A-Za-z' -]+"
+                    title="Πρώτο γράμμα κεφαλαίο & λατινικοί χαρακτήρες" required>
+                    <label for="lname" autocomplete="on">Αριθμός:</label>
+                    <input type="number" id="number" name="number" placeholder="12" required><br><br>
+
+                    <label for="lname">Τηλέφωνο:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="69********" required>
+                </fieldset>  
+                <br>
+                <fieldset id="second" class="myform" name="myform">
+                    <legend>Στοιχεία Εγγραφής</legend>
+                    <label for="fname">Όνομα χρήστη:</label>
+                    <input type="text" id="fname" name="fname" required><br><br>
+                    <label for="lname">Κωδικός</label>
+                    <input type="password" class="password" id="password" name="password"  min="8" onkeyup="tooSmall()"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Συμπεριλάβετε τουλάχιστον ένα νούμερο, ένα πεζό κι ένα κεφαλαίο γράμμα."required><br><br>
+                    <p id="alert2"></p>
+                    <label for="fname" >Επιβεβαίωση κωδικού:</label>
+                    <input type="password" class="password"id="checkPassword" name="checkPassword" min="8"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Συμπεριλάβετε τουλάχιστον ένα νούμερο, ένα πεζό κι ένα κεφαλαίο γράμμα."required><br><br>
+                    
+                    <label for="lname" autocomplete="on">E-mail:</label>
+                    <input type="text" id="email" name="email" placeholder="email@example.com" required><br><br>
+                </fieldset>
+            </div>
+
+            <div class="questionnaire">
+                <fieldset>
+                    <legend>Ερωτηματολόγιο</legend>
+
+                    <p>1. Τι είδους άρθρα σας αρέσουν να διαβάζετε; </p>
+                
+                    <label for="article1" id="check"> <input type="checkbox" id="article1" name="article1" value="science">Επιστημονικά</label><br>
+                    <label for="article2" id="check"><input type="checkbox" id="article2" name="article2" value="politics">Πολιτικά</label><br>
+                    <label for="article3" id="check"> <input type="checkbox" id="article3" name="article3" value="social">Κοινωνικά</label><br><br>
+                    <label for="article4" id="other">Άλλο: <input type="text" id="article4" name="article4"></label>
+                    
+                    <p>2. Σας ενδιαφέρει το θέμα του παρόντος ιστοτόπου;</p>
+                    <label id="check" for="2"><input type="radio" id="yes" name="answer" value="yes">Ναι</label><br>
+                    <label id="check" for="2"><input type="radio" id="no" name="answer" value="no">Οχι</label>
+                    
+                    <p>3. Είχατε ποτέ ξανακούσει για τους "Φίλους αριθμούς";</p>
+                    <label id="check" for="3"><input type="radio" id="yes" name="answer" value="yes">Ναι</label><br>
+                    <label id="check" for="3"><input type="radio" id="no" name="answer" value="no">Οχι</label>
+
+                    <p>4. Έχετε δει την ταινία "Έτερος εγώ";</p>
+                    <label id="check" for="4"><input type="radio" id="yes" name="answer" value="yes">Ναι</label><br>
+                    <label id="check" for="4"><input type="radio" id="no" name="answer" value="no">Οχι</label>
+
+                    <p>5. Αν ναι, σας άρεσε;</p>
+                    <label id="check" for="5"><input type="radio" id="bad" name="answer" value="bad">Χάλια</label><br>
+                    <label id="check" for="5"><input type="radio" id="medium" name="answer" value="medium">Μέτρια</label><br>
+                    <label id="check" for="5"><input type="radio" id="good" name="answer" value="good">Καλή</label><br>
+                    <label id="check" for="5"><input type="radio" id="very-good" name="answer" value="very-good">Πολύ καλή</label>
+
+                    <p>6. Πιστεύετε ότι το περιεχόμενο του ιστοτόπου είναι επαρκές για το θέμα που παρουσιάζεται;</p>
+                    <label id="check" for="6"><input type="radio" id="yes" name="answer" value="yes">Ναι</label><br>
+                    <label id="check" for="6"><input type="radio" id="no" name="answer" value="no">Οχι</label>
+
+                    <p>7. Αν όχι, μπορείτε να προτείνετε μερικές πηγές για παραπάνω υλικό.</p>
+                    <textarea rows="10" cols="40" id="7"></textarea>
+
+                    <p>8. Πώς θα μπορούσαμε να βελτιώσουμε τον ιστότοπο;</p>
+                    <label for="images" id="check"> <input type="checkbox" id="better" name="images" value="images">Περισσότερες εικόνες</label><br>
+                    <label for="video" id="check"><input type="checkbox" id="better" name="video" value="video">Περισσότερα βίντεο</label><br>
+                    <label for="content" id="check"> <input type="checkbox" id="better" name="content" value="content">Περισσότερα κείμενα-πηγές</label><br><br>
+                    <label for="other"id="other">Άλλο:</label><br>
+                    <textarea rows="10" cols="40" id="8"></textarea>
+
+                    <p>9. Ποιό part του ιστότοπου σας άρεσε περισσότερο;</p>
+                    <label for="first" id="check"> <input type="checkbox" id="part" name="main" value="main">Αρχική-φίλοι αριθμοί</label><br>
+                    <label for="second" id="check"><input type="checkbox" id="part" name="bio" value="bio">Ιστορία Πυθαγόρα</label><br>
+                    <label for="third" id="check"> <input type="checkbox" id="part" name="material" value="material">Ταινία έτερος εγώ</label><br><br>
+                    <label for="other"id="other">Άλλο:</label><br>
+                    <textarea rows="10" cols="40" id="9"></textarea>
+
+                    <p>10. Mε τι θα σας άρεσε να ασχοληθείτε περισσότερο;</p>
+                    <label for="1" id="check"> <input type="checkbox" id="work" name="dev" value="dev">Development</label><br>
+                    <label for="2" id="check"><input type="checkbox" id="work" name="write" value="write">Σύνταξη άρθρων</label><br>
+                    <label for="3" id="check"> <input type="checkbox" id="work" name="design" value="design">Design website</label><br><br>
+                    <label for="other"id="other">Άλλο:</label><br>
+                    <textarea rows="10" cols="40" id="9"></textarea>
+                </fieldset>
+
+                <img src="team.png" alt="Our team">
+            </div> <br>
+        
+            <input type="checkbox" id="gdpr" name="accept" value="gdpr"required>
+            <label id="accept" for="gdpr" >
+            Έχω διαβάσει και κατανοήσει τις πληροφορίες σχετικά με τη χρήση των προσωπικών μου δεδομένων που παρατίθενται στην 
+            Πολιτική απορρήτου.</label> <br>
+            
+            <input type="submit"  class="color" value="Υποβολή" >
+        </form>
+
+        <div class="container">
+            <footer id=footer>
+                <p>© 2021 | Created by Anna Kontaraki</p>
+                <p id=date> This is a paragraph for the current Date</p>
+            </footer>
+        </div>
+    </body>
+</html>

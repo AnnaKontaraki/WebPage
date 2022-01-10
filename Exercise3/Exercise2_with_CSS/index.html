@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="stylesheet" href="website.css">
+		<meta charset = "utf-8">
+		<title> Home page-ΑΝΝΑ ΚΟΝΤΑΡΑΚΗ </title>
+	</head>
+	<body>
+		<nav> <strong> <a href="index.html">Home</a> | <a href="projects.html">Projects</a> | <a href="interests.html">Interests</a> </strong> </nav>
+			<h2>  WELCOME </h2>
+		<article class="forBorder"> 
+			<h4>Σύντομες πληροφορίες</h4>
+			<img class = image src = "anna.png" alt = "A photo of me" width = "120px" height= "120px"> 
+			<p>
+				Ονομάζομαι Κονταράκη Άννα και είμαι φοιτήτρια του τμήματος Πληροφορικής - ΟΠΑ(<a href= "https://aueb.gr/" class=link> www.aueb.gr</a>).
+				Βρίσκομαι στο 4ο έτος των σπουδών μου και συγκεκριμένα στο τελευταίο εξάμηνο. 
+				
+				Αποφοίτησα από το λύκειο το 2017 και μπήκα με πανελλήνιες εξετάσεις στην πρώτη μου προτίμηση. <br>
+				Το 2015 πήρα επιτυχώς το πτυχίο Lower Michigan b2. Ωστόσο το επίπεδο των αγγλικών μου είναι λίγο παραπάνω από lower.
+				Από ξένες γλώσσες γνωρίζω επίσης ιταλικά σε μέτριο επίπεδο και παρα πολύ λίγα γαλλικά. <br>
+				Το 2018 έδωσα εξετάσεις για το δίπλωμα οδήγησης όπου και πέτυχα.<br>
+				Τέλος, έχω συμμετάσχει και σε διαγωνισμούς χορού με μεγάλη επιτυχία.
+			</p>	
+		</article><br>
+
+		<p>Στην μπάρα πλοήγησης που βρίσκεται πάνω αριστερά μπορείτε να βρείτε πιο αναλυτικές πληροφορίες για το περιεχόμενο
+			των σπουδών μου και τα ενδιαφέροντά μου.
+		</p><br>
+
+		<p id=question > Παρακαλώ για τυχόν ερωτήσεις συμπληρώστε την παρακάτω φόρμα.</p> 
+		
+		<form action="mailto:p3170072@aueb.gr" method="POST"> 
+			<label for = "fname"> Όνομα:</label><br>
+			<input type="text" id="fname" name="fname" 
+			pattern="[A-Z][A-Za-z' -]+"
+			title="Πρώτο γράμμα κεφαλαίο & λατινικοί χαρακτήρες"><br>
+
+			<label for = "lname"> Επίθετο:</label><br>
+			<input type="text" id="lname" name="lname" 
+			pattern="[A-Z][A-Za-z' -]+"
+			title="Πρώτο γράμμα κεφαλαίο & λατινικοί χαρακτήρες"><br>
+
+			<label for="email">Email</label><br>
+			<input type="email" id="email" name="email" 
+			placeholder="email@example.com" required><br>
+
+			<label for = "question">Πληκτρολογήστε ένα μήνυμα:</label><br>
+			<textarea rows="10" cols="30" id="question"> </textarea> <br> <br>  
+
+			<input type = "submit" id="submit" name="submit">
+		</form>
+		
+		<br>
+		<br>
+		<br>
+		
+		<footer> 
+			ΑΝΝΑ ΚΟΝΤΑΡΑΚΗ | e-mail: p3170072@aueb.gr <br>
+			Τμήμα Πληροφορικής ΟΠΑ 
+		</footer>
+	</body>
+</html>
